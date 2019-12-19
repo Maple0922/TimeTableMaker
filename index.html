@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>TIME TABLE MAKER</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+  <main>
+    <section id="input-field">
+      <h1>Time Table Maker</h1>
+      <table>
+        <tr class="start-time-field">
+          <th>開始時間</th>
+          <td>
+            <select id="startHour">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13" selected>13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+            </select>
+            <label>時</label>
+            <select id="startMin">
+              <option value="0" selected>00</option>
+              <option value="5">05</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+              <option value="30">30</option>
+              <option value="35">35</option>
+              <option value="40">40</option>
+              <option value="45">45</option>
+              <option value="50">50</option>
+              <option value="55">55</option>
+            </select>
+            <label>分</label>
+          </td>
+        </tr>
+        <tr class="interval-time-field">
+          <th>持ち時間</th>
+          <td>
+            <select id="bandInterval">
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25" selected>25</option>
+              <option value="30">30</option>
+              <option value="35">35</option>
+              <option value="40">40</option>
+              <option value="45">45</option>
+              <option value="50">50</option>
+              <option value="55">55</option>
+              <option value="60">60</option>
+            </select>
+            <label>分</label>
+          </td>
+        </tr>
+        <tr class="band-height-field">
+          <th>1バンドの縦幅</th>
+          <td>
+            <select id="bandHeight">
+              <option value="30">30px</option>
+              <option value="50">50px</option>
+              <option value="80">80px</option>
+              <option value="100" selected>100px</option>
+              <option value="120">120px</option>
+              <option value="150">150px</option>
+            </select>
+          </td>
+        </tr>
+        <tr class="band-name-field">
+          <th>バンド</th>
+          <td>
+            <div class="band">
+              <input type="text" class="bandName">
+              <input type="text" class="bandName">
+              <input type="text" class="bandName">
+              <input type="text" class="bandName">
+              <input type="text" class="bandName">
+              <input type="text" class="bandName">
+              <input type="text" class="bandName">
+              <input type="text" class="bandName">
+              <input type="text" class="bandName">
+              <input type="text" class="bandName">
+              <input type="text" class="bandName">
+              <input type="text" class="bandName">
+              <input type="text" class="bandName">
+              <input type="text" class="bandName">
+            </div>
+            <input id="addBand" type="button" value="バンドを追加">
+            <input id="removeBand" type="button" value="バンドを削除">
+          </td>
+        </tr>
+      </table>
+      <input type="button" id='create-timetable'value="タイムテーブルを作成">
+    </section>
+    <section id="time-table">
+      <div class="wrapper">
+        <div id="return">
+          戻る
+        </div>
+        <div id="line-toggle">
+          タイムバー
+        </div>
+        <div id="band-value">
+        </div>
+        <div id="time-indicate">
+          <label id="time-label"></label>
+        </div>
+        <div id="band-list">
+          <ul>
+          </ul>
+        </div>
+        <div id="time-list">
+          <ul>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="clock">
+      <p id="real-time"></p>
+    </section>
+  </main>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
